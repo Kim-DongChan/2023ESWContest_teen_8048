@@ -1,0 +1,23 @@
+﻿
+void setup()
+{
+	SerialBegin(115200)
+}
+
+void loop()
+{
+	a = SerialRead()
+	a0 = AnalogRead(0)
+	b = a
+	printline(a)
+	if (b =='1')
+	{
+		PrintLine('1')
+		if (220<a0)
+		{
+			Tone(13, 1000, 1000)
+			SerialWrite(0)
+		}
+	}
+	Delay(1000)
+}
